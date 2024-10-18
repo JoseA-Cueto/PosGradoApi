@@ -1,0 +1,6 @@
+@PosgradoAPI_HostAddress = http://localhost:5017
+
+GET {{PosgradoAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
