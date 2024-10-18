@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PosgradoAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5534b9761d6d43ea3e6f52a47af7493debb5a84")]
 [assembly: System.Reflection.AssemblyProductAttribute("PosgradoAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PosgradoAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

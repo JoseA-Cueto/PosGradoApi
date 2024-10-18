@@ -529,3 +529,4 @@ C:\Users\VPK\source\repos\PosgradoAPI\PosgradoAPI\bin\Debug\net8.0\zh-Hans\Micro
 C:\Users\VPK\source\repos\PosgradoAPI\PosgradoAPI\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\VPK\source\repos\PosgradoAPI\PosgradoAPI\bin\Debug\net8.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\VPK\source\repos\PosgradoAPI\PosgradoAPI\bin\Debug\net8.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
+C:\Users\VPK\source\repos\PosgradoAPI\PosgradoAPI\obj\Debug\net8.0\PosgradoAPI.sourcelink.json
