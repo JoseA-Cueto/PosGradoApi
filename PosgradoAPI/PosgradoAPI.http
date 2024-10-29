@@ -1,6 +1,10 @@
-@PosgradoAPI_HostAddress = http://localhost:5017
+@PosgradoAPI_HostAddress = https://localhost:7130
 
 GET {{PosgradoAPI_HostAddress}}/weatherforecast/
 Accept: application/json
+
+###
+
+GET {{PosgradoAPI_HostAddress}}/api/graduateprogram
 
 ###
