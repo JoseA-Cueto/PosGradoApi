@@ -9,10 +9,9 @@ namespace PosgradoAPI.DataLayer.DependencyInjection
     {
         public static void AddDataLayerDependencies(this IServiceCollection services)
         {
-            services.AddScoped<IGraduateProgramRepository, GraduateProgramRepository>();
-            services.AddScoped<IThesisRepository, ThesisRepository>();
-            services.AddScoped<IProfessorRepository, ProfessorRepository>();
-            services.AddScoped<IProfessionalRepository, ProfessionalRepository>();
+       
+            services.AddScoped<ISolicitudRepository, SolicitudRepository>();
+          
 
         }
     }

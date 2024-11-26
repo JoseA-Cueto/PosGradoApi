@@ -7,10 +7,7 @@ namespace PosgradoAPI.Core.Mappings
     {
         public MappingProfile()
         {
-            CreateMap<GraduateProgram, GraduateProgramDto>().ReverseMap();
-            CreateMap<Thesis, ThesisDto>().ReverseMap();
-            CreateMap<Professor, ProfessorDto>().ReverseMap();
-            CreateMap<Professional, ProfessionalDto>().ReverseMap();
+            CreateMap<Solicitud, SolicitudDTO>().ReverseMap();
         }
     }
 }

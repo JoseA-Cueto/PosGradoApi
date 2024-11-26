@@ -7,10 +7,8 @@
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Professional> Professional { get; set; }
-        public DbSet<GraduateProgram> GraduateProgram { get; set; }
-        public DbSet<Thesis> Thesis { get; set; }
-        public DbSet<Professor> Professor { get; set; }
+        public DbSet<Solicitud> Solicitud { get; set; }
+     
     }
 
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PosgradoAPI.DataBaseContext;
+using System.Linq.Expressions;
 
 namespace PosgradoAPI.DataLayer.RepoBase
 {
@@ -23,8 +24,17 @@ namespace PosgradoAPI.DataLayer.RepoBase
         {
             return await _dbSet.FindAsync(id);
         }
+        public async Task<int> CountAsync(Expression<Func<T, bool>> predicate = null)
+        {
+            if (predicate == null)
+            {
+                return await _context.Set<T>().CountAsync(); 
+            }
 
-       
+            return await _context.Set<T>().CountAsync(predicate); 
+        }
+
+
     }
 
 }
