@@ -53,12 +53,12 @@ namespace PosgradoAPI.WebAPI.Controllers
         }
 
         // GET: api/solicitudes/count/2
-        [HttpGet("count/{idEstadoSolicitud}")]
-        public async Task<IActionResult> GetApprovedRequestCount(int idEstadoSolicitud)
+        [HttpGet("count")]
+        public async Task<IActionResult> GetApprovedRequestCount()
         {
             try
             {
-                var count = await _solicitudService.CountAsync(idEstadoSolicitud);
+                var count = await _solicitudService.CountAsync();
                 return Ok(count);  
             }
             catch (Exception ex)
@@ -66,5 +66,20 @@ namespace PosgradoAPI.WebAPI.Controllers
                 return StatusCode(500, $"Error interno del servidor: {ex.Message}");
             }
         }
+        // GET: api/solicitudes/doctoral-faculty-count
+        [HttpGet("doctoral-faculty-count")]
+        public async Task<IActionResult> GetDoctoralProgramFacultyCount()
+        {
+            try
+            {
+                var count = await _solicitudService.GetDoctoralProgramFacultyCountAsync();
+                return Ok(count);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
+        }
+
     }
 }

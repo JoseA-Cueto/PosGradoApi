@@ -9,7 +9,7 @@ namespace PosgradoAPI.BusinessLayer.DependencyInjection
         public static void AddBusinessLayerDependencies(this IServiceCollection services)
         {
             services.AddScoped<ISolicitudService, SolicitudService>();
-           
+            services.AddScoped<IParticipanteService, ParticipanteService>();
 
 
         }

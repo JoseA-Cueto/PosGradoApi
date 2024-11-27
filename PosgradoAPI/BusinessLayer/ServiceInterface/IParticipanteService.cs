@@ -2,13 +2,10 @@
 
 namespace PosgradoAPI.BusinessLayer.ServiceInterface
 {
-    public interface ISolicitudService
+    public interface IParticipanteService
     {
-        Task<IEnumerable<SolicitudDTO>> GetAllAsync(); 
+        Task<IEnumerable<SolicitudDTO>> GetAllAsync();
         Task<SolicitudDTO> FindByIdAsync(int id);
         Task<int> CountAsync();
-        Task<int> GetDoctoralProgramFacultyCountAsync();
-
-
     }
 }
