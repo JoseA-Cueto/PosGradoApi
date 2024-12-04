@@ -5,6 +5,6 @@ namespace PosgradoAPI.DataLayer.RepositoriesInterfaces
 {
     public interface IParticipanteRepository : IRepositoryBase<Participante>
     {
-        
+        Task<int> GetFilteredParticipanteCountAsync();
     }
 }

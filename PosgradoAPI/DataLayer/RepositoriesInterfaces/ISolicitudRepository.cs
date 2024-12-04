@@ -6,5 +6,6 @@ namespace PosgradoAPI.DataLayer.RepositoriesInterfaces
     public interface ISolicitudRepository : IRepositoryBase<Solicitud>
     {
         Task<int> GetDoctoralProgramFacultyCount();
+        Task<int> GetFilteredSolicitudesCountAsync();
     }
 }

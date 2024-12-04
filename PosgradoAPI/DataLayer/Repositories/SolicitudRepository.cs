@@ -33,5 +33,27 @@ namespace PosgradoAPI.DataLayer.Repositories
 
             return cantidad;
         }
+
+        public async Task<int> GetFilteredSolicitudesCountAsync()
+        {
+           
+            const int idActividad = 3033;
+
+           
+            var gradosCientificos = new List<int> { 12, 13, 24, 26 };
+
+           
+            var cantidad = await _context.Set<Solicitud>()
+                .Where(s =>
+                   
+                    s.id_convocatoria == idActividad &&
+                   
+                    gradosCientificos.Contains(s.participante.id_grado_cientifico.Value)
+                )
+                .CountAsync(); 
+
+            return cantidad;
+        }
+
     }
 }

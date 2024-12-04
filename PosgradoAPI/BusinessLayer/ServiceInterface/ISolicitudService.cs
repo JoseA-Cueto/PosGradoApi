@@ -8,6 +8,7 @@ namespace PosgradoAPI.BusinessLayer.ServiceInterface
         Task<SolicitudDTO> FindByIdAsync(int id);
         Task<int> CountAsync();
         Task<int> GetDoctoralProgramFacultyCountAsync();
+        Task<int> GetFilteredSolicitudesCountAsync();
 
 
     }

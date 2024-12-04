@@ -24,8 +24,8 @@ namespace PosgradoAPI.BusinessLayer.Service
         {
             try
             {
-                var gradoCientifico = new List<int> { 12, 13, 24, 26 };
-                return await _repository.CountAsync(p => p.id_grado_cientifico.HasValue && gradoCientifico.Contains(p.id_grado_cientifico.Value));
+               
+                return await _repository.CountAsync();
             }
             catch (Exception ex)
             {
@@ -59,6 +59,21 @@ namespace PosgradoAPI.BusinessLayer.Service
             }
         }
 
+        
+        public async Task<int> GetFilteredParticipanteCountAsync()
+        {
+            try
+            {
+               
+                var count = await _repository.GetFilteredParticipanteCountAsync();
+                return count;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al contar los participantes filtrados: {ex.Message}", ex);
+                throw new ApplicationException("Ocurrió un error al contar los participantes filtrados.");
+            }
+        }
 
         public async Task<IEnumerable<SolicitudDTO>> GetAllAsync()
         {

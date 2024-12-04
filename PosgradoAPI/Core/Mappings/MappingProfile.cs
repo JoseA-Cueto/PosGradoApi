@@ -9,6 +9,9 @@ namespace PosgradoAPI.Core.Mappings
         {
             CreateMap<Solicitud, SolicitudDTO>().ReverseMap();
             CreateMap<Participante, ParticipanteDTO>().ReverseMap();
+            CreateMap<TomoFolio, TomoFolioDTO>().ReverseMap();
+            CreateMap<Actividad, ActividadDTO>().ReverseMap();
+
         }
     }
 }

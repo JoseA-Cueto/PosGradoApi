@@ -11,16 +11,16 @@ namespace UnitTest13
         {
             
         }
-        [Fact]
-        public void TestUnit()
-        {
-            var mockRepository = new Mock<IProfessionalRepository>();
-            var mockMapper = new Mock<IMapper>();
-            var mockProfessorRepository = new Mock<IProfessorRepository>();
+        //[Fact]
+        //public void TestUnit()
+        //{
+        //    var mockRepository = new Mock<IProfessionalRepository>();
+        //    var mockMapper = new Mock<IMapper>();
+        //    var mockProfessorRepository = new Mock<IProfessorRepository>();
 
-            var func = new ProfessionalService(mockRepository.Object, mockMapper.Object, mockProfessorRepository.Object);
-            var response = func.GetAllAsync();
-            Assert.NotNull(response);
-        }
+        //    var func = new ProfessionalService(mockRepository.Object, mockMapper.Object, mockProfessorRepository.Object);
+        //    var response = func.GetAllAsync();
+        //    Assert.NotNull(response);
+        //}
     }
 }

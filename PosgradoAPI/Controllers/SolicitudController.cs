@@ -80,6 +80,25 @@ namespace PosgradoAPI.WebAPI.Controllers
                 return StatusCode(500, $"Error interno del servidor: {ex.Message}");
             }
         }
+        // GET: api/solicitudes/filtered-count
+        [HttpGet("filtered-count")]
+        public async Task<IActionResult> GetFilteredSolicitudesCount()
+        {
+            try
+            {
+                // Llama al servicio para obtener el conteo filtrado
+                var count = await _solicitudService.GetFilteredSolicitudesCountAsync();
+
+                // Devuelve el resultado como respuesta exitosa
+                return Ok(new { count });
+            }
+            catch (Exception ex)
+            {
+                // Captura cualquier error y devuelve un estado 500
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
+        }
+
 
     }
 }

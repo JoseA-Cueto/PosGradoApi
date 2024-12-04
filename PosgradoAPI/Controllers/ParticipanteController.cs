@@ -18,6 +18,23 @@ namespace PosgradoAPI.WebAPI.Controllers
             _participanteService = participanteService;
         }
 
+      
+        [HttpGet("filtered-count")]
+        public async Task<IActionResult> GetFilteredParticipanteCount()
+        {
+            try
+            {
+              
+                var count = await _participanteService.GetFilteredParticipanteCountAsync();
+                return Ok(count);  
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
+        }
+
+
         // GET: api/participantes/count
         [HttpGet("count")]
         public async Task<IActionResult> GetDoctoralCandidatesCount()

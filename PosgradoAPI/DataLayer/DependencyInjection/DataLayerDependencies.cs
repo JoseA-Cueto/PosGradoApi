@@ -12,6 +12,8 @@ namespace PosgradoAPI.DataLayer.DependencyInjection
        
             services.AddScoped<ISolicitudRepository, SolicitudRepository>();
             services.AddScoped<IParticipanteRepository, ParticipanteRepository>();
+            services.AddScoped<ITomoFolioRepository, TomoFolioRepository>();
+            services.AddScoped<IActividadRepository, ActividadRepository>();
 
 
         }

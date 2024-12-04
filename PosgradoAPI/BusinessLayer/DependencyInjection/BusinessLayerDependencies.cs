@@ -10,6 +10,8 @@ namespace PosgradoAPI.BusinessLayer.DependencyInjection
         {
             services.AddScoped<ISolicitudService, SolicitudService>();
             services.AddScoped<IParticipanteService, ParticipanteService>();
+            services.AddScoped<ITomoFolioService, TomoFolioService>();
+            services.AddScoped<IActividadService, ActividadService>();
 
 
         }

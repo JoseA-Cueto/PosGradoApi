@@ -7,5 +7,6 @@ namespace PosgradoAPI.BusinessLayer.ServiceInterface
         Task<IEnumerable<SolicitudDTO>> GetAllAsync();
         Task<SolicitudDTO> FindByIdAsync(int id);
         Task<int> CountAsync();
+        Task<int> GetFilteredParticipanteCountAsync();
     }
 }

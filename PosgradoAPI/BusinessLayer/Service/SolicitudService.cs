@@ -106,6 +106,31 @@ namespace PosgradoAPI.BusinessLayer.Service
         }
 
 
+        public async Task<int> GetFilteredSolicitudesCountAsync()
+        {
+            try
+            {
+
+                _logger.LogInformation("Iniciando el conteo de profesores en el programa doctoral.");
+
+
+                var count = await _repository.GetFilteredSolicitudesCountAsync();
+
+
+                _logger.LogInformation($"Se han contado exitosamente {count} profesores en programas doctorales.");
+
+                return count;
+            }
+            catch (Exception ex)
+            {
+
+                _logger.LogError($"Error al contar los profesores del programa doctoral: {ex.Message}", ex);
+
+
+                throw new ApplicationException("Ocurrió un error al contar los profesores en programas doctorales.");
+            }
+        }
+
 
     }
 }
