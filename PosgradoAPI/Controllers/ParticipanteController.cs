@@ -50,6 +50,21 @@ namespace PosgradoAPI.WebAPI.Controllers
             }
         }
 
+        [HttpGet("participantes-con-cuadro-true")]
+        public async Task<IActionResult> ContarParticipantesConCuadroTrue()
+        {
+            try
+            {
+                var cantidadParticipantes = await _participanteService.ContarParticipantesConCuadroTrueAsync();
+                return Ok(cantidadParticipantes); 
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
+        }
+
+
         // GET: api/participantes/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetParticipanteById(int id)

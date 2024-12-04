@@ -20,6 +20,29 @@ namespace PosgradoAPI.BusinessLayer.Service
             _logger = logger;
         }
 
+
+        public async Task<int> ContarParticipantesConCuadroTrueAsync()
+        {
+            try
+            {
+
+                var participantes = await _repository.GetAllAsync();
+
+
+                var participantesConCuadroTrue = participantes
+                    .Where(p => p.cuadro == true)
+                    .Count();
+
+                return participantesConCuadroTrue;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al contar los participantes con cuadro = true: {ex.Message}", ex);
+                throw new ApplicationException("Ocurrió un error al contar los participantes con cuadro = true.");
+            }
+        }
+
+
         public async Task<int> CountAsync()
         {
             try

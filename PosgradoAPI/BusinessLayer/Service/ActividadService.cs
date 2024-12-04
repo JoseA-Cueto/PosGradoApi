@@ -67,12 +67,12 @@ namespace PosgradoAPI.BusinessLayer.Service
         {
             try
             {
-                
-                var actividadesActivas = await _repository.GetAllAsync(); 
-                
+
+                var actividadesActivas = await _repository.GetAllAsync();
+
                 int totalMatricula = actividadesActivas
                     .Where(a => a.activo == true)
-                    .Sum(a => a.matricula_total ?? 0); 
+                    .Sum(a => a.matricula_total ?? 0);
 
                 return totalMatricula;
             }
@@ -82,6 +82,32 @@ namespace PosgradoAPI.BusinessLayer.Service
                 throw new ApplicationException("Ocurrió un error al obtener la matrícula total de actividades activas.");
             }
         }
+        public async Task<int?> ObtenerMatriculaTotalFijaAsync()
+        {
+            try
+            {
+                
+                int idFijo = 2672;
+
+              
+                var actividad = await _repository.FindByIdAsync(idFijo); 
+
+           
+                if (actividad == null)
+                {
+                    return null; 
+                }
+
+                
+                return actividad.matricula_total;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error al obtener la matrícula total de la actividad con id {2672}: {ex.Message}", ex);
+                throw new ApplicationException($"Ocurrió un error al obtener la matrícula total de la actividad con id {2672}.");
+            }
+        }
+
 
     }
 }

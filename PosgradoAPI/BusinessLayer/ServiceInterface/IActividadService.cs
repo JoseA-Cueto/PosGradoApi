@@ -9,7 +9,7 @@ namespace PosgradoAPI.BusinessLayer.ServiceInterface
         Task<ActividadDTO> FindByIdAsync(int id);
         Task<int> CountAsync();
         Task<int> ObtenerMatriculaTotalActivasAsync();
-
+        Task<int?> ObtenerMatriculaTotalFijaAsync();
 
     }
 }

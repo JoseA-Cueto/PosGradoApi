@@ -80,5 +80,24 @@ namespace PosgradoAPI.API.Controllers
             }
         }
 
+        [HttpGet("matricula-total-fija")]
+        public async Task<IActionResult> ObtenerMatriculaTotalFija()
+        {
+            try
+            {
+                var matriculaTotal = await _actividadService.ObtenerMatriculaTotalFijaAsync();
+                if (matriculaTotal == null)
+                {
+                    return NotFound($"Actividad con id {2672} no encontrada.");
+                }
+                return Ok(matriculaTotal);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Error interno del servidor: {ex.Message}");
+            }
+        }
+
+
     }
 }
