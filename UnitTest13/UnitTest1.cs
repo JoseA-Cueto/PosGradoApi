@@ -1,6 +1,8 @@
 using AutoMapper;
+using Microsoft.Extensions.Logging;
 using Moq;
 using PosgradoAPI.BusinessLayer.Service;
+using PosgradoAPI.Core.DTOs;
 using PosgradoAPI.DataLayer.RepositoriesInterfaces;
 
 namespace UnitTest13
@@ -11,16 +13,16 @@ namespace UnitTest13
         {
             
         }
-        //[Fact]
-        //public void TestUnit()
-        //{
-        //    var mockRepository = new Mock<IProfessionalRepository>();
-        //    var mockMapper = new Mock<IMapper>();
-        //    var mockProfessorRepository = new Mock<IProfessorRepository>();
+        [Fact]
+        public void TestUnit()
+        {
+            var mockRepository = new Mock<IActividadRepository>();
+            var mockMapper = new Mock<IMapper>();
+            var mockProfessorRepository = new Mock<ILogger<ActividadDTO>>();
 
-        //    var func = new ProfessionalService(mockRepository.Object, mockMapper.Object, mockProfessorRepository.Object);
-        //    var response = func.GetAllAsync();
-        //    Assert.NotNull(response);
-        //}
+            var func = new ActividadService(mockRepository.Object, mockMapper.Object, mockProfessorRepository.Object);
+            var response = func.GetAllAsync();
+            Assert.NotNull(response);
+        }
     }
 }
