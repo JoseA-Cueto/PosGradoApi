@@ -14,4 +14,4 @@ Este proyecto ofrece un servicio API RESTful para integrar de manera eficiente y
 ## Instalación
 1. Clona el repositorio:
   
-  https://github.com/JoseA-Cueto/PosGradoApi.git
+git clone  https://github.com/JoseA-Cueto/PosGradoApi.git
