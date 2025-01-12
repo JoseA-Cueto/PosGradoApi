@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "ZcIlJqQr0BCcsDcW6RenHna9TgSL5/fR7RQT3AsnzFc=",
+  "Hash": "kXw+34euzSZ7No7OXaWLttBOQ/t/yJIJFqGVYr4cIy4=",
   "Source": "PosgradoAPI",
   "BasePath": "_content/PosgradoAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
