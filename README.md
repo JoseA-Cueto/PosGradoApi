@@ -1,17 +1,17 @@
-# API RESTful para Integración con WSO2
+# RESTful API for Integration with WSO2
+## Description
+This project offers a RESTful API service to efficiently and securely integrate the WSO2 platform with your existing applications and services. The API provides endpoints for data management, facilitating communication and interoperability between different systems.
 
-## Descripción
-Este proyecto ofrece un servicio API RESTful para integrar de manera eficiente y segura la plataforma WSO2 con tus aplicaciones y servicios existentes. La API proporciona endpoints para el manejo de datos, facilitando la comunicación e interoperabilidad entre diferentes sistemas.
+## Features
+Data Management: CRUD operations for data related to Postgraduate entities.
 
-## Características
-- **Manejo de datos:** CRUD de datos relacionados con entidades de PosGrado
+## Requirements
+.NET 8
 
-## Requisitos
-  - .NET 8
-  - PostgreSQL 14.x o superior
-  - WSO2 Identity Server 2.6.0 o superior
+PostgreSQL 14.x or higher
 
-## Instalación
-1. Clona el repositorio:
-  
-  https://github.com/JoseA-Cueto/PosGradoApi.git
+WSO2 Identity Server 2.6.0 or higher
+
+## Installation
+Clone the repository:  
+git clone  https://github.com/JoseA-Cueto/PosGradoApi.git
